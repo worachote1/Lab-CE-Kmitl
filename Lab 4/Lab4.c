@@ -6,7 +6,7 @@
 #include<math.h>
 #include<ctype.h>
  
-//ตอนนี้มี bug คือ ตัวแรกกับตัวสุดท้ายไม่ทํางาน
+//ตอนนี้มี bug คือ ถ้าด้านหน้าไม่ใส่เลขเลยจะไม่แสดงตัวนั้นให้ ทั้งที่ควรแสดงออกมา1ตัว
 int integer(char* str) 
 {
     int figure = strlen(str) - 1;
