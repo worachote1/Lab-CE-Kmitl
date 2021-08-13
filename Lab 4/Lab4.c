@@ -29,7 +29,7 @@ int main(void) {
     scanf("%s", s);
     int i = 0;
     int num = 1;
-    char digits[10] = "";//store string which in term of digits
+    char digits[10] = "1";//store string which in term of digits
     int x = 0;
     while (s[i] != '\0') {
         if (isdigit(s[i])) { //ถ้าไม่ใช่เลข จะ return 0
@@ -40,8 +40,8 @@ int main(void) {
             x = 0;
             num = integer(digits);
             printMul(num, s[i]);
-            num = 1;
-            strcpy(digits, "");
+            
+            strcpy(digits, "1");
         }
         i++;
     }
