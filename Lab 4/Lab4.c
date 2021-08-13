@@ -6,7 +6,7 @@
 #include<math.h>
 #include<ctype.h>
  
-//µÕππ’È¡’ bug §◊Õ µ—«·√°°—∫µ—« ÿ¥∑È“¬‰¡Ë∑Ì“ß“π
+//‡∏ï‡∏≠‡∏ô‡∏ô‡∏µ‡πâ‡∏°‡∏µ bug ‡∏Ñ‡∏∑‡∏≠ ‡∏ï‡∏±‡∏ß‡πÅ‡∏£‡∏Å‡∏Å‡∏±‡∏ö‡∏ï‡∏±‡∏ß‡∏™‡∏∏‡∏î‡∏ó‡πâ‡∏≤‡∏¢‡πÑ‡∏°‡πà‡∏ó‡πç‡∏≤‡∏á‡∏≤‡∏ô
 int integer(char* str) 
 {
     int figure = strlen(str) - 1;
@@ -32,7 +32,7 @@ int main(void) {
     char digits[10] = "";//store string which in term of digits
     int x = 0;
     while (s[i] != '\0') {
-        if (isdigit(s[i])) { //∂È“‰¡Ë„™Ë‡≈¢ ®– return 0
+        if (isdigit(s[i])) { //‡∏ñ‡πâ‡∏≤‡πÑ‡∏°‡πà‡πÉ‡∏ä‡πà‡πÄ‡∏•‡∏Ç ‡∏à‡∏∞ return 0
             digits[x] = s[i];
             x += 1;
         }
