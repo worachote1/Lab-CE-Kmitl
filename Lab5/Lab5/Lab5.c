@@ -8,14 +8,8 @@ void gotoxy(int x,int y) {
 }
 
 void draw_ship(int a,int b) {
-	//for (int i = 1; i <= 60; i++) {
-	//	gotoxy(a+i, b);
-	//	Sleep(500);
-	//	printf("<-0->");
-	//	//system("cls");
-	//}
 	gotoxy(a,b);
-	Sleep(0);
+	Sleep(500);
 	printf("<-0->");
 }
 void erase_ship(int x, int y) {
