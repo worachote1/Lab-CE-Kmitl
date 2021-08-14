@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <conio.h>
 void gotoxy(int x,int y) {
-	COORD c = { x, y}; //แสดงผลที่บรรทัด y ตัวอักษรที่ x โดย 1 บรรทัดมี 80 ตัวอักษร
+	COORD c = { x, y}; //display at order of character x and line y
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
 }
 
@@ -25,9 +25,12 @@ void erase_ship(int x, int y) {
 int main() {
 	//Lab 5
 	//Movement and display in Text-mode game
-	//ใช้ประมาณ y = 25 ให้อยู่ล่างสุด
 	
-	// set size of window
+	
+	// set size of window (now i don't use these code below , instead of these,Right Click on title bar of your running console application
+	//-Select Properties
+	//-Select Layout
+	//-Then set the window size.)
 	/*
 	CONSOLE_SCREEN_BUFFER_INFOEX consolesize;
 
