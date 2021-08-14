@@ -6,7 +6,6 @@
 #include<math.h>
 #include<ctype.h>
  
-//ตอนนี้มี bug คือ ตัวแรกกับตัวสุดท้ายไม่ทํางาน
 int integer(char* str) 
 {
     int figure = strlen(str) - 1;
@@ -32,7 +31,7 @@ int main(void) {
     char digits[10] = "1";//store string which in term of digits
     int x = 0;
     while (s[i] != '\0') {
-        if (isdigit(s[i])) { //ถ้าไม่ใช่เลข จะ return 0
+        if (isdigit(s[i])) { 
             digits[x] = s[i];
             x += 1;
         } 
@@ -40,8 +39,8 @@ int main(void) {
             x = 0;
             num = integer(digits);
             printMul(num, s[i]);
-            num = 1;
-            strcpy(digits, "");
+
+            strcpy(digits, "1");
         }
         i++;
     }
