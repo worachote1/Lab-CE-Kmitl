@@ -76,7 +76,7 @@ int main() {
 				RIGHT = false;
 				STOP = true;				
 			}
-			//set bullet status if press space bar
+			//set bullet status if press k
 			if (ch == ' ') {
 				for (int i = 0; i < 5;i++) {
 					if (bullet[i]==0) {
