@@ -81,9 +81,10 @@ int main()
     bool RIGHT = false;
     bool LEFT = false;
     int bullet =  0 ;
-    int bx, by;
-    int Sx, Sy;
+    int bx, by; //bullet distance
+    int Sx, Sy; //star distance
     int score = 0;
+    //star position
     int PosSx[20];
     int PosSy[20];
     
