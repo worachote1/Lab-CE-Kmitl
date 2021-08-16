@@ -38,6 +38,7 @@ void gotoxy(int x, int y)
 void draw_bullet(int x, int y)
 {
     gotoxy(x, y);
+    setcolor(6, 6);
     printf("^");
 }
 void erase_bullet(int x, int y)
@@ -48,6 +49,7 @@ void erase_bullet(int x, int y)
 void draw_ship(int x, int y)
 {
     gotoxy(x, y);
+    setcolor(6, 5);
     printf(" <-0-> ");
 }
 void erase_ship(int x, int y)
@@ -76,17 +78,17 @@ int main()
     int x = 38, y = 20;
     int count = 20;
     bool STOP = false;
-    bool LEFT = false;
     bool RIGHT = false;
-    int bullet[5] = { 0 };
-    int bx[5], by[5];
+    bool LEFT = false;
+    int bullet =  0 ;
+    int bx, by;
     int Sx, Sy;
     int score = 0;
     int PosSx[20];
     int PosSy[20];
-    setcolor(6, 5);
+    
     draw_ship(x, y);
-
+    //random 20 stars
     for (int star = 0; star < 20; star++)
     {
         Sy = rand() % 6 + 2;
@@ -121,30 +123,28 @@ int main()
             }
             if (ch == ' ')
             {
-                for (int i = 0; i < 5; i++)
-                {
-                    if (bullet[i] == 0)
+         
+                    if (bullet == 0)
                     {
-                        bullet[i] = 1;
-                        bx[i] = x + 3;
-                        by[i] = y - 1;
-                        setcolor(6, 6);
-                        draw_bullet(bx[i], by[i]);
+                        bullet = 1;
+                        bx = x + 3;
+                        by = y - 1;
+                        
+                        draw_bullet(bx, by);
                         Beep(500, 60);
-                        break;
+                       
                     }
-                }
+                
             }
             fflush(stdin);
         }
-        for (int i = 0; i < 5; i++)
-        {
-            if (bullet[i] != 0)
+     
+            if (bullet != 0)
             {
                 int isCollide = 0;
                 for (int pos = 0; pos < 20; pos++)
                 {
-                    if (bx[i] == PosSx[pos] && by[i] == PosSy[pos])
+                    if (bx == PosSx[pos] && by == PosSy[pos])
                     {
                         isCollide = 1;
                         score++;
@@ -156,20 +156,21 @@ int main()
                 }
 
                 setcolor(6, 0);
-                erase_bullet(bx[i], by[i]);
-                if (by[i] == 1 || isCollide==1)
+                erase_bullet(bx, by);
+                if (by == 1 || isCollide==1)
                 {
-                    bullet[i] = 0;
+                    bullet = 0;
                 }
                 else
                 {
                     setcolor(6, 6);
-                    draw_bullet(bx[i], --by[i]);
+                    draw_bullet(bx, --by);
                 }
 
             }
             Score(0, 0, score);
-        }
+       
+        
         if ((LEFT == 1) && (x > 0))
         {
             setcolor(6, 0);
