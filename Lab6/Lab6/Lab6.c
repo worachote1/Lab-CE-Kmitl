@@ -47,7 +47,7 @@ int main() {
 
 	//Let's play !!!
 	char ch = ' ';
-	int x = 38, y = 20;
+	int x = 38, y = 40;
 	setcursor(0);
 	draw_ship(x, y);
 	bool LEFT = false;

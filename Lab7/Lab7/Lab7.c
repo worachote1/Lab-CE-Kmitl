@@ -44,6 +44,7 @@ void draw_bullet(int x, int y)
 void erase_bullet(int x, int y)
 {
     gotoxy(x, y);
+   
     printf(" ");
 }
 void draw_ship(int x, int y)
@@ -73,7 +74,7 @@ int main()
 {
     int i, j;
     srand(time(NULL));
-    setcursor(0);
+    //setcursor(0);
     char ch = ' ';
     int x = 38, y = 20;
     int count = 20;
