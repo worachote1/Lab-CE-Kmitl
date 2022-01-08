@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <windows.h>
 #include <conio.h>
+//Hello world , from git bash
 void gotoxy(int x,int y) {
 	COORD c = { x, y}; //display at order of character x and line y
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);
